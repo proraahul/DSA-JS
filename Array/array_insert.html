@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Element in Array</title>
+    <script>
+        // let data = [60,30,40,67,23,45];
+        // let newEle = 50;
+        // let index = 1;
+
+        // for(let i=data.length-1; i>=0; i--){
+            
+        //     if(i>=index){
+        //         data[i+1] = data[i];
+        //         if(i == index){
+        //             data[i] = newEle;
+        //         }
+        //     }
+        // }
+        // console.log(data)
+
+        function insertElem(){
+
+            let data = [60,30,40,67,23,45];
+
+            let newEle = document.getElementById('newElem').value;
+            newEle = parseInt(newEle);
+            let index = document.getElementById('index').value;
+
+            for(let i= data.length-1; i>=0; i--){
+                if(i >= index){
+                    data[i+1]= data[i];
+
+                    if(i == index){
+                        data[i] = newEle;
+                    }
+                }
+            }
+            console.log(data);
+        }
+    </script>
+</head>
+<body> 
+    <input type="text" placeholder="enter index" id="index" style="padding: 10px;"/>
+    <input type="text" placeholder="Enter new Element" id="newElem" style="padding: 10px;"/>
+
+    <button onclick="insertElem()" style="padding: 10px;">Insert</button>
+</body>
+</html>

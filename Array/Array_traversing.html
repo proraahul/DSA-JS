@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array traversing</title>
+    <script>
+      let array = [12, 1, 98, 45, 32, 78, 0, 23, 66, 42, 56, 9];
+      // for(let i=0; i<array.length; i++){
+      //     document.write(`array ${i} is ${array[i]} </br>`)
+      // }
+
+      // let x = 10;
+      // document.write(array[x])
+
+      function getElement(){
+
+        let el = document.getElementById("element").value;
+
+        if (el<array.length && typeof parseInt(el)==='number' && el >= 0){
+          alert(array[el]);
+        }else{
+            alert('out of range');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Array Traversing and Accessing</h1>
+    <ul>
+      <li>Make Html page write Basic array</li>
+      <li>Traversing with loop</li>
+      <li>Accessing Element</li>
+      <li>Access element with text input and button</li>
+      <li>validation</li>
+    </ul>
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get Element</button>
+  </body>
+</html>
