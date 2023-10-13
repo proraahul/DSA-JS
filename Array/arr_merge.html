@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge two Array</title>
+    <script>
+        // By using For Loop
+        let data1 = [3,7,12,32,46,57,68,78,98];
+        let data2 = [4,10,35,42,59,62];
+        let data =[];
+
+        for(let i=0; i<data1.length; i++){
+            data[i] = data1[i];
+        }
+        for(let i=0; i<data2.length; i++){
+            data[data1.length+i] = data2[i];
+        }
+        console.log(data)
+        // output not sorted array
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
