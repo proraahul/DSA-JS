@@ -1,3 +1,6 @@
+
+// JS throw exception- js throw statement to throw an exception
+
 function add(x, y){
     if(typeof x !== 'number'){
         throw 'The first argument must be a number';
