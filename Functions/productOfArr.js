@@ -10,7 +10,7 @@ function productOfArray(arr){
 console.log('productOfArray[1,2]: ', productOfArray([1,2]));
 console.log('productOfArray[1,2,3,4,5]: ', productOfArray([1,2,3,4,5]));
 
-
+// 
 
 function productOfArray2(arr){
     if(arr.length === 0){
@@ -25,6 +25,7 @@ function productOfArray2(arr){
 console.log('productOfArray2([1,2,3,4,5]): ',productOfArray2([1,2,3,4,5]));
 console.log('productOfArray2([]): ',productOfArray2([]));
 
+// 
 
 function gcd(a, b){
     if(a == 0){
