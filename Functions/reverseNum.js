@@ -10,7 +10,7 @@ function reverseFunction(num) {
         [digit, ...acc], []);
     return parseInt(reversedArray.join(''));
 }; 
-// console.log(reverseFunction(8158182348));
+console.log(reverseFunction(8158182348));
 
 
 // using string iteration:
@@ -18,7 +18,7 @@ function reverseFunction(num) {
 	let numStr = num.toString(); 
 	let reversedStr = ''; 
 	for (let i = numStr.length - 1; i >= 0; i--) { 
-		reversedStr += numStr[i]; 
+		reversedStr += numStr[i]; l
 	} 
 	return parseInt(reversedStr); 
 } 
