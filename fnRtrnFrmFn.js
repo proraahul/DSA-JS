@@ -26,6 +26,7 @@ console.table(products);
 
 // sort products by prices
 
+
 console.log('Products sorted by price:');
 products.sort(compareBy('price'));
 console.table(products);
