@@ -25,7 +25,7 @@ function isOperator(char) {
       if(/[a-zA-Z0-9]/.test(currentChar)){
         // Operand, append to postfix
         postfix += currentChar;
-      }else if (isOperator(currentChar)){
+      }else if(isOperator(currentChar)){
         // Operator, pop higher or equal precedence operators from stack and then push current operator
         while(stack.length > 0 && getPrecedence(stack[stack.length - 1]) >= getPrecedence(currentChar)){
           postfix += stack.pop();

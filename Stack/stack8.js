@@ -1,12 +1,12 @@
 // write a program to implement the browser back button using a stack in javascript
 
-class BrowserHistory {
-    constructor() {
+class BrowserHistory{
+    constructor(){
       this.pageStack = [];
     }
   
     // Visit a new page and push it onto the stack
-    visitPage(page) {
+    visitPage(page){
       console.log(`Visiting page: ${page}`);
       this.pageStack.push(page);
     }
