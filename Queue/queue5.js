@@ -1,7 +1,7 @@
 // write a program to implement a circular queue in javascript:
 
-class CircularQueue {
-    constructor(maxSize) {
+class CircularQueue{
+    constructor(maxSize){
       this.maxSize = maxSize;
       this.queue = new Array(maxSize);
       this.front = -1;
@@ -9,23 +9,23 @@ class CircularQueue {
     }
   
     // Check if the queue is empty
-    isEmpty() {
+    isEmpty(){
       return this.front === -1;
     }
 
     // Check if the queue is full
-    isFull() {
+    isFull(){
       return (this.rear + 1) % this.maxSize === this.front;
     }
 
     // Enqueue an element to the rear of the queue
-    enqueue(element) {
-    if (this.isFull()) {
+    enqueue(element){
+    if(this.isFull()){
         console.log("Queue is full. Cannot enqueue element.");
         return;
     }
   
-    if (this.isEmpty()) {
+    if(this.isEmpty()){
         this.front = 0;
     }
   
@@ -35,19 +35,19 @@ class CircularQueue {
     }
   
     // Dequeue an element from the front of the queue
-    dequeue() {
-      if (this.isEmpty()) {
+    dequeue(){
+      if(this.isEmpty()){
         console.log("Queue is empty. Cannot dequeue element.");
         return;
       }
   
       const dequeuedElement = this.queue[this.front];
   
-      if (this.front === this.rear) {
+      if(this.front === this.rear){
         // Reset front and rear when the last element is dequeued
         this.front = -1;
         this.rear = -1;
-      } else {
+      }else{
         this.front = (this.front + 1) % this.maxSize;
       }
   
@@ -56,8 +56,8 @@ class CircularQueue {
     }
   
     // Display the elements of the queue
-    display() {
-      if (this.isEmpty()) {
+    display(){
+      if(this.isEmpty()){
         console.log("Queue is empty.");
         return;
       }
@@ -65,7 +65,7 @@ class CircularQueue {
       let displayString = "Elements in the queue: ";
       let i = this.front;
   
-      do {
+      do{
         displayString += this.queue[i] + " ";
         i = (i + 1) % this.maxSize;
       } while (i !== (this.rear + 1) % this.maxSize);

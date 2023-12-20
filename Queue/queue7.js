@@ -1,29 +1,29 @@
 // write a program to implement a priority queue using a linked list in javascript:
 
-class Node {
-    constructor(element, priority) {
+class Node{
+    constructor(element, priority){
       this.element = element;
       this.priority = priority;
       this.next = null;
     }
   }
   
-  class PriorityQueue {
+  class PriorityQueue{
     constructor() {
       this.front = null;
     }
   
     // Enqueue an element with a given priority
-    enqueue(element, priority) {
+    enqueue(element, priority){
       const newNode = new Node(element, priority);
   
-      if (!this.front || priority < this.front.priority) {
+      if(!this.front || priority < this.front.priority){
         newNode.next = this.front;
         this.front = newNode;
       } else {
         let current = this.front;
   
-        while (current.next && priority >= current.next.priority) {
+        while(current.next && priority >= current.next.priority){
           current = current.next;
         }
   
@@ -33,8 +33,8 @@ class Node {
     }
   
     // Dequeue the element with the highest priority
-    dequeue() {
-      if (!this.front) {
+    dequeue(){
+      if(!this.front){
         return "Queue is empty";
       }
   
@@ -45,7 +45,7 @@ class Node {
     }
   
     // Check if the priority queue is empty
-    isEmpty() {
+    isEmpty(){
       return !this.front;
     }
   

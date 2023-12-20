@@ -1,7 +1,7 @@
 // write a program to implement a priority queue using an array in javascript:
 
-class PriorityQueue {
-    constructor() {
+class PriorityQueue{
+    constructor(){
       this.queue = [];
     }
   
@@ -10,8 +10,8 @@ class PriorityQueue {
       const item = { element, priority };
       let added = false;
   
-      for (let i = 0; i < this.queue.length; i++) {
-        if (priority < this.queue[i].priority) {
+      for(let i = 0; i < this.queue.length; i++){
+        if(priority < this.queue[i].priority){
           this.queue.splice(i, 0, item);
           added = true;
           break;
@@ -24,26 +24,26 @@ class PriorityQueue {
     }
   
     // Dequeue the element with the highest priority
-    dequeue() {
-      if (this.isEmpty()) {
+    dequeue(){
+      if (this.isEmpty()){
         return "Queue is empty";
       }
       return this.queue.shift().element;
     }
   
     // Check if the priority queue is empty
-    isEmpty() {
+    isEmpty(){
       return this.queue.length === 0;
     }
   
     // Return the size of the priority queue
-    size() {
+    size(){
       return this.queue.length;
     }
   
     // Display the elements of the priority queue
-    display() {
-      if (this.isEmpty()) {
+    display(){
+      if (this.isEmpty()){
         console.log("Priority queue is empty.");
         return;
       }
