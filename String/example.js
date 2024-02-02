@@ -25,4 +25,4 @@ function count(s){
 
 let str = "#GeeKs01fOr@gEEks07";
 let result = count(str);
-console.log(result)
+console.log(result);
